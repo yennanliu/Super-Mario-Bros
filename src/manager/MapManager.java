@@ -28,7 +28,7 @@ public class MapManager {
         map.updateLocations();
     }
 
-    public void resetCurrentMap(SuperMarioApp engine) {
+    public void resetCurrentMap(GameEngine engine) {
         Mario mario = getMario();
         mario.resetLocation();
         engine.resetCamera();
@@ -51,7 +51,7 @@ public class MapManager {
         return map.getMario();
     }
 
-    public void fire(SuperMarioApp engine) {
+    public void fire(GameEngine engine) {
         Fireball fireball = getMario().fire();
         if (fireball != null) {
             map.addFireball(fireball);
@@ -93,7 +93,7 @@ public class MapManager {
         return getMario().getX() >= map.getEndPoint().getX() + 320;
     }
 
-    public void checkCollisions(SuperMarioApp engine) {
+    public void checkCollisions(GameEngine engine) {
         if (map == null) {
             return;
         }
@@ -107,7 +107,7 @@ public class MapManager {
         checkFireballContact();
     }
 
-    private void checkBottomCollisions(SuperMarioApp engine) {
+    private void checkBottomCollisions(GameEngine engine) {
         Mario mario = getMario();
         ArrayList<Brick> bricks = map.getAllBricks();
         ArrayList<Enemy> enemies = map.getEnemies();
@@ -145,7 +145,7 @@ public class MapManager {
         removeObjects(toBeRemoved);
     }
 
-    private void checkTopCollisions(SuperMarioApp engine) {
+    private void checkTopCollisions(GameEngine engine) {
         Mario mario = getMario();
         ArrayList<Brick> bricks = map.getAllBricks();
 
@@ -162,7 +162,7 @@ public class MapManager {
         }
     }
 
-    private void checkMarioHorizontalCollision(SuperMarioApp engine){
+    private void checkMarioHorizontalCollision(GameEngine engine){
         Mario mario = getMario();
         ArrayList<Brick> bricks = map.getAllBricks();
         ArrayList<Enemy> enemies = map.getEnemies();
@@ -301,7 +301,7 @@ public class MapManager {
         }
     }
 
-    private void checkPrizeContact(SuperMarioApp engine) {
+    private void checkPrizeContact(GameEngine engine) {
         ArrayList<Prize> prizes = map.getRevealedPrizes();
         ArrayList<GameObject> toBeRemoved = new ArrayList<>();
 

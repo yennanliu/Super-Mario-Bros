@@ -1,6 +1,6 @@
 package model.prize;
 
-import manager.SuperMarioApp;
+import manager.GameEngine;
 import model.hero.Mario;
 import model.hero.MarioForm;
 import view.Animation;
@@ -16,7 +16,7 @@ public class FireFlower extends BoostItem {
     }
 
     @Override
-    public void onTouch(Mario mario, SuperMarioApp engine) {
+    public void onTouch(Mario mario, GameEngine engine) {
         mario.acquirePoints(getPoint());
 
         ImageLoader imageLoader = new ImageLoader();

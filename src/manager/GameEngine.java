@@ -9,7 +9,7 @@ import java.awt.*;
 
 /** MAIN APP ENTRY POINT */
 
-public class SuperMarioApp implements Runnable {
+public class GameEngine implements Runnable {
 
     private final static int WIDTH = 1268, HEIGHT = 708;
 
@@ -24,7 +24,7 @@ public class SuperMarioApp implements Runnable {
     private StartScreenSelection startScreenSelection = StartScreenSelection.START_GAME;
     private int selectedMap = 0;
 
-    private SuperMarioApp() {
+    public GameEngine() {
         init();
     }
 
@@ -336,10 +336,10 @@ public class SuperMarioApp implements Runnable {
         return mapManager;
     }
 
-    public static void main(String... args) {
-        System.out.println("Game app start !!!");
-        new SuperMarioApp();
-    }
+//    public static void main(String... args) {
+//        System.out.println("Game app start !!!");
+//        new GameEngine();
+//    }
 
     public int getRemainingTime() {
         return mapManager.getRemainingTime();

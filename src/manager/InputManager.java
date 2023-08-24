@@ -8,9 +8,9 @@ import java.awt.event.MouseListener;
 
 public class InputManager implements KeyListener, MouseListener{
 
-    private SuperMarioApp engine;
+    private GameEngine engine;
 
-    InputManager(SuperMarioApp engine) {
+    InputManager(GameEngine engine) {
         this.engine = engine; }
 
     @Override

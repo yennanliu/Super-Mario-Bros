@@ -1,6 +1,6 @@
 package model.prize;
 
-import manager.SuperMarioApp;
+import manager.GameEngine;
 import model.GameObject;
 import model.hero.Mario;
 
@@ -33,7 +33,7 @@ public class Coin extends GameObject implements Prize{
     }
 
     @Override
-    public void onTouch(Mario mario, SuperMarioApp engine) {
+    public void onTouch(Mario mario, GameEngine engine) {
         if(!acquired){
             acquired = true;
             mario.acquirePoints(point);

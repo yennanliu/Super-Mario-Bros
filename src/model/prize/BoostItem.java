@@ -1,6 +1,6 @@
 package model.prize;
 
-import manager.SuperMarioApp;
+import manager.GameEngine;
 import model.GameObject;
 import model.hero.Mario;
 
@@ -17,7 +17,7 @@ public abstract class BoostItem extends GameObject implements Prize{
         setDimension(48, 48);
     }
 
-    public abstract void onTouch(Mario mario, SuperMarioApp engine);
+    public abstract void onTouch(Mario mario, GameEngine engine);
 
     @Override
     public int getPoint() {

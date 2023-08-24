@@ -1,6 +1,6 @@
 package model.brick;
 
-import manager.SuperMarioApp;
+import manager.GameEngine;
 import manager.MapManager;
 import model.prize.Prize;
 import view.Animation;
@@ -32,7 +32,7 @@ public class OrdinaryBrick extends Brick {
     }
 
     @Override
-    public Prize reveal(SuperMarioApp engine){
+    public Prize reveal(GameEngine engine){
         MapManager manager = engine.getMapManager();
         if(!manager.getMario().isSuper())
             return null;

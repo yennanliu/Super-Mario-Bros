@@ -1,6 +1,6 @@
 package model.prize;
 
-import manager.SuperMarioApp;
+import manager.GameEngine;
 import model.hero.Mario;
 
 import java.awt.image.BufferedImage;
@@ -13,7 +13,7 @@ public class OneUpMushroom extends BoostItem{
     }
 
     @Override
-    public void onTouch(Mario mario, SuperMarioApp engine) {
+    public void onTouch(Mario mario, GameEngine engine) {
         mario.acquirePoints(getPoint());
         mario.setRemainingLives(mario.getRemainingLives() + 1);
         engine.playOneUp();

@@ -1,6 +1,6 @@
 package model.brick;
 
-import manager.SuperMarioApp;
+import manager.GameEngine;
 import model.GameObject;
 import model.prize.Prize;
 
@@ -33,7 +33,7 @@ public abstract class Brick extends GameObject{
         this.empty = empty;
     }
 
-    public Prize reveal(SuperMarioApp engine){ return null;}
+    public Prize reveal(GameEngine engine){ return null;}
 
     public Prize getPrize() {
         return null;
