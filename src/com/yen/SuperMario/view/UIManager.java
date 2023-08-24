@@ -38,13 +38,18 @@ public class UIManager extends JPanel{
         this.aboutScreenImage = loader.loadImage("/about-screen.png");
         this.gameOverScreen = loader.loadImage("/game-over.png");
 
-        try {
-            InputStream in = getClass().getResourceAsStream("/media/font/mario-font.ttf");
-            gameFont = Font.createFont(Font.TRUETYPE_FONT, in);
-        } catch (FontFormatException | IOException e) {
-            gameFont = new Font("Verdana", Font.PLAIN, 12);
-            e.printStackTrace();
-        }
+//        try {
+//            // src/com/yen/SuperMario/media
+//            //InputStream in = getClass().getResourceAsStream("/media/font/mario-font.ttf");
+//            InputStream in = getClass().getResourceAsStream("/src/com/yen/SuperMario/media/font/mario-font.ttf");
+//            gameFont = Font.createFont(Font.TRUETYPE_FONT, in);
+//        } catch (FontFormatException | IOException e) {
+//            gameFont = new Font("Verdana", Font.PLAIN, 12);
+//            e.printStackTrace();
+//        }
+
+        gameFont = new Font("Verdana", Font.PLAIN, 12);
+
     }
 
     @Override
