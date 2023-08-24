@@ -1,6 +1,6 @@
 package model.prize;
 
-import manager.GameEngine;
+import manager.SuperMarioApp;
 import model.hero.Mario;
 import model.hero.MarioForm;
 import view.Animation;
@@ -16,7 +16,7 @@ public class SuperMushroom extends BoostItem{
     }
 
     @Override
-    public void onTouch(Mario mario, GameEngine engine) {
+    public void onTouch(Mario mario, SuperMarioApp engine) {
         mario.acquirePoints(getPoint());
 
         ImageLoader imageLoader = new ImageLoader();

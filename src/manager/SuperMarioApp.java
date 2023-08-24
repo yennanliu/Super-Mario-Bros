@@ -4,11 +4,12 @@ import model.hero.Mario;
 import view.ImageLoader;
 import view.StartScreenSelection;
 import view.UIManager;
-
 import javax.swing.*;
 import java.awt.*;
 
-public class GameEngine implements Runnable {
+/** MAIN APP ENTRY POINT */
+
+public class SuperMarioApp implements Runnable {
 
     private final static int WIDTH = 1268, HEIGHT = 708;
 
@@ -23,7 +24,7 @@ public class GameEngine implements Runnable {
     private StartScreenSelection startScreenSelection = StartScreenSelection.START_GAME;
     private int selectedMap = 0;
 
-    private GameEngine() {
+    private SuperMarioApp() {
         init();
     }
 
@@ -336,7 +337,8 @@ public class GameEngine implements Runnable {
     }
 
     public static void main(String... args) {
-        new GameEngine();
+        System.out.println("Game app start !!!");
+        new SuperMarioApp();
     }
 
     public int getRemainingTime() {

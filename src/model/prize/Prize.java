@@ -1,7 +1,6 @@
 package model.prize;
 
-import manager.GameEngine;
-import manager.MapManager;
+import manager.SuperMarioApp;
 import model.hero.Mario;
 
 import java.awt.*;
@@ -14,6 +13,6 @@ public interface Prize {
 
     Rectangle getBounds();
 
-    void onTouch(Mario mario, GameEngine engine);
+    void onTouch(Mario mario, SuperMarioApp engine);
 
 }

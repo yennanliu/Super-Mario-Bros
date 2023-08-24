@@ -1,10 +1,7 @@
 package model.brick;
 
-import manager.GameEngine;
-import model.Map;
-import model.hero.Mario;
+import manager.SuperMarioApp;
 import model.prize.Prize;
-import view.ImageLoader;
 
 import java.awt.image.BufferedImage;
 
@@ -20,7 +17,7 @@ public class SurpriseBrick extends Brick{
     }
 
     @Override
-    public Prize reveal(GameEngine engine){
+    public Prize reveal(SuperMarioApp engine){
         BufferedImage newStyle = engine.getImageLoader().loadImage("/sprite.png");
         newStyle = engine.getImageLoader().getSubImage(newStyle, 1, 2, 48, 48);
 

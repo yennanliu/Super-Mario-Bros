@@ -1,7 +1,7 @@
 package model.hero;
 
 import manager.Camera;
-import manager.GameEngine;
+import manager.SuperMarioApp;
 import view.Animation;
 import model.GameObject;
 import view.ImageLoader;
@@ -46,7 +46,7 @@ public class Mario extends GameObject{
         super.draw(g);
     }
 
-    public void jump(GameEngine engine) {
+    public void jump(SuperMarioApp engine) {
         if(!isJumping() && !isFalling()){
             setJumping(true);
             setVelY(10);
@@ -65,7 +65,7 @@ public class Mario extends GameObject{
         this.toRight = toRight;
     }
 
-    public boolean onTouchEnemy(GameEngine engine){
+    public boolean onTouchEnemy(SuperMarioApp engine){
 
         if(!marioForm.isSuper() && !marioForm.isFire()){
             remainingLives--;

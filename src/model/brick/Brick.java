@@ -1,8 +1,7 @@
 package model.brick;
 
-import manager.GameEngine;
+import manager.SuperMarioApp;
 import model.GameObject;
-import model.Map;
 import model.prize.Prize;
 
 import java.awt.image.BufferedImage;
@@ -34,7 +33,7 @@ public abstract class Brick extends GameObject{
         this.empty = empty;
     }
 
-    public Prize reveal(GameEngine engine){ return null;}
+    public Prize reveal(SuperMarioApp engine){ return null;}
 
     public Prize getPrize() {
         return null;

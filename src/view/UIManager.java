@@ -1,18 +1,17 @@
 package view;
 
-import manager.GameEngine;
+import manager.SuperMarioApp;
 import manager.GameStatus;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
 public class UIManager extends JPanel{
 
-    private GameEngine engine;
+    private SuperMarioApp engine;
     private Font gameFont;
     private BufferedImage startScreenImage, aboutScreenImage, helpScreenImage, gameOverScreen;
     private BufferedImage heartIcon;
@@ -20,7 +19,7 @@ public class UIManager extends JPanel{
     private BufferedImage selectIcon;
     private MapSelection mapSelection;
 
-    public UIManager(GameEngine engine, int width, int height) {
+    public UIManager(SuperMarioApp engine, int width, int height) {
         setPreferredSize(new Dimension(width, height));
         setMaximumSize(new Dimension(width, height));
         setMinimumSize(new Dimension(width, height));
